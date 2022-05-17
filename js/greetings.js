@@ -17,7 +17,7 @@ if(savedUserName) {
     toDoName.classList.add('hidden');
     const greetings = document.createElement('span');
     toDoForm.append(greetings);
-    greetings.innerText = `Good morning, ${savedUserName}.`;
+    greetings.innerText = `Good morning, ${savedUserName}`;
 }
 
 toDoForm.addEventListener('submit', handleToDoName);
