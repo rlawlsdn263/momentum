@@ -1,11 +1,11 @@
-const toDoForm = document.getElementById('toDoForm');
-const toDoName = document.getElementById('toDoName');
+const greetingsForm = document.getElementById('greetingsForm');
+const greetingsName = document.getElementById('greetingsName');
 
 
 //Write your name here!
 function handleToDoName(e) {
     // e.preventDeault();
-    const userName = toDoName.value;
+    const userName = greetingsName.value;
     localStorage.setItem('userName', userName);
     // const span = createElement('span');
     // span.innerText = `Good morning, ${userName}.`;
@@ -14,10 +14,10 @@ function handleToDoName(e) {
 const savedUserName = localStorage.getItem('userName');
 
 if(savedUserName) {
-    toDoName.classList.add('hidden');
+    greetingsName.classList.add('hidden');
     const greetings = document.createElement('span');
-    toDoForm.append(greetings);
+    greetingsForm.append(greetings);
     greetings.innerText = `Good morning, ${savedUserName}`;
 }
 
-toDoForm.addEventListener('submit', handleToDoName);
+greetingsForm.addEventListener('submit', handleToDoName);
